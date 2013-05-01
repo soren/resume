@@ -1,0 +1,204 @@
+% TODO: add Footer with link: http://slu.sdf.org/resume/kompetencer.pdf
+
+\documentclass[a4paper,11pt]{article}
+
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0in
+\textwidth=6.5in
+\marginparwidth=0.5in
+\headheight=0pt
+\headsep=0pt
+\textheight=10.0in
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{parskip}
+\usepackage{marvosym}
+\usepackage{tabularx}
+
+\newcommand\redacted{[skjult i online version]}
+
+\newcommand\myaddressone{\redacted}
+\newcommand\myaddresstwo{\redacted}
+\newcommand\myphone{\redacted}
+
+%
+% By default address and phonenumber are redacted. To display address
+% and phonenumber create the file myinfo.tex which should override the
+% three commands: \myaddressone, \myaddresstwo and \myphone, e.g:
+%
+%    \renewcommand\myaddressone{Street 123}
+%    \newcommand\myaddresstwo{City Zip}
+%    \newcommand\myphone{5555 5555}
+%
+
+\include{myinfo}
+
+\begin{document}
+
+\centerline{\fontfamily{phv}\selectfont{\textbf{Bilag til CV}}}
+\centerline{\fontfamily{phv}\selectfont{\textbf{Tekniske kompetencer}}}
+
+\begin{minipage}[b]{0.30\textwidth}
+  \fontfamily{phv}\selectfont%
+  \textbf{Søren Lund} \\
+  \myaddressone \\
+  \myaddresstwo \\
+  \myphone \\
+  \Email\ soren@lund.org
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.30\textwidth}
+  \fontfamily{phv}\selectfont%
+  Jeg er en alsidig it-konsulent med
+  mere end 17 års professionel
+  erfaring. Jeg har en bred vifte af
+  kompetencer, og
+  kan lide nye udfordringer.
+\end{minipage}
+
+\bigskip
+\bigskip
+
+Herunder er en gennemgang af mine tekniske kompetencer. For hver
+kompetence har jeg angivet et niveau (meget højt, højt, godt kendskab,
+noget kendskab), hvornår jeg sidst har brugt den pågældende
+kompetence, samt hvor mange års professionel erfaring jeg har. Enkelte
+steder har jeg desuden angivet et årstal i parentes, det angiver hvor
+mange år jeg i alt har erfaring, f.eks. fra studiet eller privat.
+
+\bigskip
+\begin{tabularx}{\textwidth}{X l r r}
+  \textbf{Arbejdsområder/-processer} & \textbf{Niveau} & \textbf{Sidst brugt} & \textbf{År} \\
+  \hline
+  Design af brugergrænseflader      & Højt             & 2013	              & 14 \\
+  Databasedesign                    & Højt             & 2013                 & 12 \\
+  Sikkerhed                         & Godt kendskab    & 2013                 & 12 \\
+  Implementering                    & Meget højt       & 2013                 & 17 \\
+  Udrulning                         & Højt             & 2013                 & 17 \\
+  Webteknologi                      & Meget højt       & 2013                 & 15 \\
+  Analyse                           & Højt             & 2013                 & 17 \\
+  Kvalitetssikring                  & Meget Højt       & 2013                 & 17 \\
+  Design                            & Højt             & 2013                 & 17 \\
+  Programmering                     & Højt             & 2013                 & 17 \\
+  Systemadministration              & Højt             & 2013                 & 17 \\
+  \hline
+\end{tabularx}
+
+\bigskip
+\begin{tabularx}{\textwidth}{X l r r}
+  \textbf{Platforme}                & \textbf{Niveau} & \textbf{Sidst brugt} & \textbf{År} \\
+  \hline
+  J2SE                              & Højt            & 2013                 &     11 \\
+  Apache Tomcat                     & Højt            & 2013                 &      7 \\
+  PHP                               & Godt kendskab   & 2012                 &      7 \\
+  Apache HTTP Server                & Højt            & 2013                 &     13 \\
+  MySQL                             & Godt kendskab   & 2012                 &      8 \\
+  Oracle DB                         & Godt kendskab   & 2013                 &     11 \\
+  MS SQL Server                     & Godt kendskab   & 2006                 &      5 \\
+  MS IIS                            & Godt kendskab   & 2005                 &      5 \\
+  MS Office (VBA)                   & Noget kendskab  & 2002                 &      4 \\
+  ASP                               & Godt kendskab   & 2005                 &      6 \\
+  Linux (bruger)                    & Meget højt      & 2013                 & 11 (17)\\
+  Linux (server)                    & Højt            & 2013                 &     14 \\
+  Windows (bruger)                  & Højt            & 2013                 &     16 \\
+  Windows (server)                  & Højt            & 2013                 &     15 \\
+  HP-UX (bruger/server)             & Godt kendskab   & 2000                 &      4 \\
+  SUN Solaris                       & Noget kendskab  & 2006                 &      2 \\
+  Elastic Path eCommerce platform   & Noget kendskab  & 2006                 &      1 \\
+  SAP Enterprise Portal             & Noget kendskab  & 2006                 &      1 \\
+  LDAP (Active Directory/OpenLDAP)  & Noget kendskab  & 2006                 &      3 \\
+  VMware ESX Server                 & Godt kendskab   & 2010                 &      4 \\
+  Oracle iAS                        & Noget kendskab  & 2010                 &      4 \\
+  OC4J                              & Godt kendskab   & 2010                 &      4 \\
+  JBoss AS                          & Godt kendskab   & 2013                 &      5 \\
+  CouchDB                           & Godt kendskab   & 2011                 &      1 \\
+  Apache FOP                        & Godt kendskab   & 2013                 &      2 \\
+  \hline
+\end{tabularx}
+
+\bigskip
+\begin{tabularx}{\textwidth}{X l r r}
+  \textbf{Programmeringssprog og lign.}  & \textbf{Niveau}  & \textbf{Sidst brugt}  & \textbf{År} \\
+  \hline
+  Java                                      & Højt            & 2013  &    11 \\
+  HTML                                      & Højt            & 2013  &    16 \\
+  CSS                                       & Højt            & 2013  &    15 \\
+  Perl                                      & Højt            & 2013  &    15 \\
+  JavaScript                                & Højt            & 2013  &    16 \\
+  SQL (PL/SQL)                              & Højt            & 2013  &    14 \\
+  XML                                       & Højt            & 2013  &    12 \\
+  XSLT                                      & Godt kendskab   & 2013  &     4 \\
+  Bash (sh)                                 & Højt            & 2013  &    16 \\
+  Awk                                       & Godt kendskab   & 2006  &     9 \\
+  VBScript (VB/VBA)                         & Godt kendskab   & 2005  &     8 \\
+  JSP                                       & Højt            & 2013  &     9 \\
+  JSTL                                      & Højt            & 2012  &     6 \\
+  Velocity Template Language                & Godt kendskab   & 2006  &     4 \\
+  JDBC                                      & Godt kendskab   & 2006  &     4 \\
+  iBATIS Data Mapper framework              & Noget kendskab  & 2006  &     2 \\
+  WebWork web-application framework         & Godt kendskab   & 2005  &     3 \\
+  SiteMesh layout and decoration framework  & Noget kendskab  & 2005  &     2 \\
+  Apache Struts MVC framework               & Noget kendskab  & 2006  &     1 \\
+  C/C++                                     & Højt            & 2001  & 5 (10)\\
+  JavaServer Faces (Apache MyFaces)         & Godt kendskab   & 2013  &     5 \\
+  JPA/Hibernate ORM                         & Godt kendskab   & 2013  &     7 \\
+  JUnit                                     & Godt kendskab   & 2013  &     7 \\
+  Mockito                                   & Godt kendskab   & 2013  &     2 \\
+  Log4J                                     & Godt kendskab   & 2013  &     7 \\
+  UML (Activity, Class, Deploy., Seq.)      & Noget kendskab  & 2010  &     6 \\
+  TestNG                                    & Noget kendskab  & 2010  &    <1 \\
+  XSL-FO                                    & Godt kendskab   & 2013  &     2 \\
+  \hline
+\end{tabularx}
+
+\bigskip
+\begin{tabularx}{\textwidth}{X l r r}
+  \textbf{Værktøjer}  & \textbf{Niveau}                     & \textbf{Sidst brugt}  & \textbf{År} \\
+  \hline
+  GNU/Emacs                               & Højt            & 2013                  & 17 (23)\\
+  CVS                                     & Højt            & 2006                  &      6 \\
+  Ant                                     & Godt kendskab   & 2013                  &      6 \\
+  Make                                    & Godt kendskab   & 2011                  &      7 \\
+  LibreOffice (tidl. OpenOffice.org)      & Godt kendskab   & 2013                  &     12 \\
+  The GIMP                                & Godt kendskab   & 2013                  &     10 \\
+  DbVisualiser                            & Godt kendskab   & 2006                  &      3 \\
+  MS Visual SourceSafe                    & Højt            & 2005                  &      9 \\
+  MS Office                               & Godt kendskab   & 2013                  &     15 \\
+  phpMyAdmin                              & Højt            & 2006                  &      6 \\
+  MS SQL Enterprise Manager               & Godt kendskab   & 2006                  &      5 \\
+  MS SQL Query Analyser                   & Godt kendskab   & 2006                  &      5 \\
+  Lotus Notes                             & Godt kendskab   & 2006                  &      5 \\
+  Nvu                                     & Noget kendskab  & 2006                  &      2 \\
+  Web Developer (Firefox extension)       & Godt kendskab   & 2013                  &     10 \\
+  Wise InstallBuilder                     & Noget kendskab  & 2001                  &      1 \\
+  SAP NetWeaver Developer Studio/Eclipse  & Noget kendskab  & 2006                  &      1 \\
+  \LaTeX                                  & Godt kendskab   & 2013                  &  <1 (6)\\
+  SquirreL SQL Client                     & Godt kendskab   & 2013                  &      7 \\
+  Firebug (Firefox extension)             & Godt kendskab   & 2013                  &      7 \\
+  Subversion (svn)                        & Højt            & 2013                  &      7 \\
+  Maven 2 og 3                            & Højt            & 2013                  &      6 \\
+  SmartSVN                                & Højt            & 2013                  &      6 \\
+  Cruise Control                          & Noget kendskab  & 2010                  &      4 \\
+  JSPWIki                                 & Godt kendskab   & 2010                  &      4 \\
+  Redmine                                 & Godt kendskab   & 2013                  &      6 \\
+  Jenkins (tidl. Hudson) CI               & Højt kendskab   & 2013                  &      3 \\
+  Nagios                                  & Godt kendskab   & 2011                  &      2 \\
+  Smolder (CI)                            & Godt kendskab   & 2011                  &     <1 \\
+  Vmware vSphere / ESXi                   & Noget kendskab  & 2013                  &      2 \\
+  Git                                     & Højt            & 2013                  &   2 (4)\\
+  Java Spring                             & Noget kendskab  & 2010                  &     <1 \\
+  OpenNMS                                 & Noget kendskab  & 2010                  &     <1 \\
+  OpenQRM                                 & Noget kendskab  & 2010                  &     <1 \\
+  Nexus Maven Repository Manager          & Noget kendskab  & 2013                  &      2 \\
+  Apache JMeter                           & Godt kendskab   & 2013                  &     <1 \\
+  Selenium IDE (Firefox extension)        & Højt kendskab   & 2013                  &      4 \\
+  Oracle SQL Developer                    & Noget kendskab  & 2013                  &     <1 \\
+  SSH (PuTTY)                             & Højt kendskab   & 2013                  &      8 \\
+  \hline
+\end{tabularx}
+
+%TODO: Tilføj boblere, f.eks. jQuery, XSLT, XSL-FO, HTML5, Angular, Handlebars, Node.js
+
+\end{document}
