@@ -6,7 +6,7 @@ PUBLISH_DIR = $(shell if [[ -f $(CONFIG_FILE) ]]; then cat $(CONFIG_FILE); else 
 all: $(PDF_TARGETS)
 
 %.pdf: %.tex
-	date --date "$(shell git 2>/dev/null log $<|head -n3|awk '/^Date:/{print $$2,$$3,$$4,$$5,$$6}')" +"%Y kl. %H:%M" > $<.ts
+	date --date "$(shell git 2>/dev/null log $<|head -n3|awk '/^Date:/{print $$2,$$3,$$4,$$5,$$6}')" +"%F %H:%M" > $<.ts
 	pdflatex $<
 
 #if git 2>/dev/null status --porcelain $< | grep --silent $< \
