@@ -2,3 +2,6 @@ myinfo.tex
 *.aux
 *.log
 *.pdf
+/kompetencer.tex.ts
+/cv.tex.ts
+/public_html.in
