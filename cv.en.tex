@@ -1,0 +1,334 @@
+% TODO: add links to linkedin, twitter, etc
+% TODO: add links to projects, on cpan and github
+
+\documentclass[a4paper,11pt]{article}
+
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0in
+\textwidth=6.5in
+\marginparwidth=0.5in
+\headheight=0pt
+\headsep=0pt
+\textheight=10.0in
+
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{marvosym}
+
+\newcommand\redacted{[skjult i online version]}
+
+\newcommand\myaddressone{\redacted}
+\newcommand\myaddresstwo{\redacted}
+\newcommand\myphone{\redacted}
+
+%
+% By default address and phonenumber are redacted. To display address
+% and phonenumber create the file myinfo.tex which should override the
+% three commands: \myaddressone, \myaddresstwo and \myphone, e.g:
+%
+%    \renewcommand\myaddressone{Street 123}
+%    \newcommand\myaddresstwo{City Zip}
+%    \newcommand\myphone{5555 5555}
+%
+
+\include{myinfo}
+
+\begin{document}
+
+\centerline{\fontfamily{phv}\selectfont{\Huge\textbf{CV}}}
+\bigskip
+
+\begin{minipage}[b]{0.30\textwidth}
+  \fontfamily{phv}\selectfont%
+  \textbf{Søren Lund} \\
+  \myaddressone \\
+  \myaddresstwo \\
+  \myphone \\
+  \Email\ soren@lund.org
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.30\textwidth}
+  \fontfamily{phv}\selectfont%
+  I'm a versatile IT consultant with
+  more than 20 years professional 
+  work experience. I have a broad
+  set of skills and enjoys new
+  challenges.
+\end{minipage}
+
+\bigskip
+\centerline{\small\textit{Latest version available here: http://slu.sdf.org/resume/cv.en.pdf}}
+\centerline{\small\textit{Date and time latest revision of this document: \input{cv.tex.ts}}}
+
+\section*{Previous and current positions}
+
+\textbf{Freelance consulent} \hfill 2012 -- (now) \\
+\textsl{369 Consult}
+
+\smallskip
+
+\textbf{Senior Konsulent, External} \hfill 2014 -- (now) \\
+\textsl{Nordea A/S}
+
+Jeg har været med til udvikling, fejlretning og 3rd level support på
+en moderne webløsning til blandt andet valutahandel. Løsningen er
+baseret på RESTful micro services, Dropwizard, Oracle DB, Lucene,
+Hibernate og AngularJS. Desuden har jeg stået for implementeringen af
+automatiseret byg, test og udrulning i Jenkins og Bamboo.
+
+Webløsningen afløser et tidligere produkt baseret på Java Swing, Java
+Web Start, Oracle DB og med flere integrationer til bagvedliggende
+systemer. Jeg har også hjulpet med videreudvikling, fejlretning og 3rd
+level support af dette produkt.
+
+\smallskip
+
+\textbf{Senior Consulent, External} \hfill 2012 -- 2013 \\
+\textsl{Visma Consulting A/S}
+
+Fortsat som konsulent hos Visma Consulting, nu som selvstændig, se
+nedenfor.
+
+\smallskip
+
+\textbf{Senior Consulent} \hfill 2011 -- 2012 \\
+\textsl{Solfisk Konsulenter Aps}
+
+Arbejdet som ekstern konsulent hos Visma Consulting, hvor jeg har
+været med til at udvikle to webløsninger baseret på bl.a. JSF 2, Seam,
+JBoss AS, Hibernate, XSL-FO (PDF), Web Services og Oracle
+DB. Udviklingen har været styret vha.\ Scrum og jeg har arbejdet med
+alle dele af udviklingen, fra back-end til front-end.  Har desuden
+arbejdet med AM og videreudvikling på både disse systemer og andre
+systemer, der vedligeholdes af Visma Consulting.
+
+\smallskip
+
+\textbf{Senior Systemudvikler} \hfill 2010 -- 2011 \\
+\textsl{LeasingBørsen Aps (now GoLease.com)}
+
+Jeg var en del af udviklingsafdelingen, men jeg havde også et ben
+driftsafdelingen. Deltog i videreudvikling og vedligehold af
+forskellige egenudviklede systemer, først og fremmest en
+web-applikation, der var skrevet i Perl, Catalyst og CouchDB.  Al
+udvikling var styret vha.\ Scrum. Jeg var derudover, som Release
+Manager, ansvarlig for integrationstest og udrulning i både test og
+produktion.
+
+\smallskip
+
+\textbf{Senior Consulent} \hfill 2006 -- 2010 \\
+\textsl{Sirius IT A/S (orig. TietoEnator A/S)}
+
+Medlem af et team med fokus på én kunde og dennes webbaserede
+systemer. Der har været tale om både projekter med nyudvikling samt
+support og fejlretning på de eksisterende systemer. Min rolle har
+primært været teknisk funderet og indadvendt mod teamet, først og
+fremmest som Build Master og dermed med det tekniske ansvar for
+leverancerne, og dernæst som udvikler og supporter.
+
+\smallskip
+
+\textbf{Senior System Developer} \hfill 2000 -- 2006 \\
+\textsl{CSC Consulting Group (orig. eHuset)}
+
+Involveret i kundeprojekter af varierende størrelse. Dette har primært
+været webløsninger, oftes med en bagvedliggende database og/eller
+integration til eksisterende systemer. Min rolle har varieret en del,
+da jeg både har arbejdet med implementering, design, behovsafdækning
+(hos/med kunder), støtte for salg, support og løsningsarkitekt.
+
+\smallskip
+
+\textbf{Software Developer} \hfill 1996 -- 2000 \\
+\textsl{Dansk Maritimt Institut (now Force Technology)}
+
+Udvikling og vedligehold af in-house simulatorsystem og
+produktificering af samme. Mine opgaver var primært udvikling, på
+flere platforme og med flere teknologier – alt fra små scripts, over
+biblioteker/moduler til komplette brugergrænseflader.
+
+
+\section*{Education}
+
+\textbf{Master of Science in Engineering} \hfill 1987 -- 1995 \\
+\textsl{Technical University of Denmark}
+
+Mit afgangsspeciale hed \textit{Rent parallaktisk stereo}, og blev
+skrevet på Instituttet for matematisk modellering (IMM).
+
+
+\section*{Training \& courses}
+
+\textbf{Nyheder i Java EE 6} \hfill (1 dag) 2010 \\
+\textsl{Lund\&Bendsen}
+
+\textbf{Introduktion til ITIL} \hfill (1 dag) 2008 \\
+\textsl{(Internt kursus h/Sirius IT -- ekstern underviser)}
+
+\textbf{Introduktion PRINCE2} \hfill (1 dag) 2008 \\
+\textsl{(Internt kursus h/Sirius IT -- ekstern underviser)}
+
+\textbf{BEA kursus WLP-D11-70-01-CW-2} \hfill (5 dage) 2003 \\
+\textsl{Development with BEA WebLogic Portal}
+
+\textbf{BEA selvstudie WLS-D11-61-01-CW} \hfill (2 dage) 2003 \\
+\textsl{Fundamentals of J2EE Web Application Development\\WebLogic Server 6.1}
+
+%%\textbf{Skriv bedre} \hfill (1 dag) 2000 \\
+%%\textsl{IDA}
+%%
+%%\textbf{Præsentationsteknik} \hfill (1 dag) 2002 \\
+%%\textsl{IDA}
+
+\textbf{Databaser og Internet (ASP, SQL)} \hfill (5 dage) 1999 \\
+\textsl{Dieu}
+
+\textbf{OOD med UML notation} \hfill (3 dage) 1998 \\
+\textsl{Objektorienteret Design og C++ / Java Implementering\\Teknologisk Institut}
+
+
+\section*{Skills}
+
+\subsection*{Overall Skills}
+
+\begin{description}
+
+  \item[Kvalitetssikring/koordinering --] Jeg har arbejdet en del
+    med konfigurationsstyring, automatiserede tests og Release
+    Management.
+
+  \item[Løsningsarkitekt --] Jeg er generalist, med en bred faglig
+    baggrund, og får nemt overblikket over komplicerede systemer.
+
+  \item[Tilbudsgivning/estimering --] Jeg har været med til at
+    udarbejde flere, både små og store, tilbud. Desuden har jeg både
+    alene og med forretningskonsulenter være med til at skrive
+    anbefalinger/udbudsmateriale for kunder.
+
+  \item[Forretningsforståelse --] Jeg er vant til kundekontakt og
+    støtter ofte i forbindelse med pre-sales.
+
+  \item[Systemintegration --] Jeg har bred teknisk viden, som jeg
+    blandt andet har benyttet til integration af legacy-systemer til
+    webløsninger/portaler.
+
+  \item[Udvikling/vedligehold/support --] Jeg har erfaringer med
+    stort set alle former for udviklingsopgaver, både sammen med
+    andre og alene.
+
+\end{description}
+
+\subsection*{Specific Skills}
+
+Herunder er nogle eksempler på projekter/opgaver, som jeg har været
+indvolveret i:
+
+\begin{description}
+
+\item[Udvikling og drift af webløsning.] Færdigudvikling og
+  idriftsættelse af webløsning til oprettelse,
+  betaling og visning af annoncer.
+
+  \textit{Teknologier:} Perl, Catalyst, Apache HTTP Server, CouchDB, XSLT, Linux\\
+  \textit{Roller:} Udvikler, Release Manager, Support, System Administrator
+
+\item[Migrering fra Oracle iAS til JBoss AS.] En
+  plaformsmigrering af en J2EE-applikation, der var udviklet til
+  Oracle iAS. Denne skulle migreres, så den kunne afviles under
+  en JBoss AS. Dette indebar kodeændringer, nye deployment
+  scripts, ændrede bygge-scripts samt opsætning af nye
+  udviklings-, test- og produktionsmiljøer.
+
+  \textit{Teknologier:} J2EE, Jboss, Maven, VMWare ESX\\
+  \textit{Roller:} Infrastrukturarkitet, Build Master
+
+\item[Modernisering af system til elektronisk anmeldelse.]
+  Første fase bestod af tre dele: opbygning af en ny mere
+  tidssvarende arkitektur, implementering af ny
+  funktionalitet samt integration til legacy-systemet.
+
+  \textit{Teknologier:} J2EE, JavaServer Faces, Hibernate, SQL, Oracle
+  iAS, OC4J, Maven.\\
+  \textit{Roller:} Build Master, Udvikler
+
+\item[Webbutik] til intern handel i større dansk virksomhed
+  med flere fysiske lokationer.
+
+  \textit{Teknologier:} J2EE, Velocity, SQL, Struts, Apache Tomcat\\
+  \textit{Roller:} Løsningsarkitekt, udvikler, supporter
+
+\item[Portaler] til både medarbejdere og kunder for stor
+  international virksomhed.
+
+  \textit{Teknologier:} J2EE, SAP Enterprise Portal 6, Knowledge Manager, SQL\\
+  \textit{Roller:} Udvikler, supporter
+
+\item[Udarbejdelse af udbudsmateriale] i nært samarbejde med en
+  forretningskonsulent og kunden. Dokumentation af det nuværende og
+  kommende produktionssystem.
+
+  \textit{Teknologier:} Proces-, Data Flow- og Deployment-diagrammer.\\
+  \textit{Roller:} Løsningsarkitekt, forretningskonsulent
+
+\item[Et specialudviklet CMS], der, med minimal
+  administration, kan præsentere et online kursuskatalog,
+  hvorfra der kan bestilles og købes kurser.
+
+  \textit{Teknologier:} J2EE, Apache Tomcat, SQL, Perl\\
+  \textit{Roller:} Udvikler, supporter
+
+\item[Intranet og internet] for flere offentlige kunder.
+
+  \textit{Teknologier:} ASP, Index Server, IIS\\
+  \textit{Roller:} Løsningsarkitekt, udvikler
+
+\item[Websted] i forbindelse med større tilbud.
+
+  \textit{Teknologier:} PHP, MySQL, Apache, Fundanemt\\
+  \textit{Roller:} Løsningsarkitekt, udvikler, grafiker
+
+\item[Forretningsudvikling] i en
+  tværorganisatorisk gruppe over en periode på knap et
+  år.
+
+  \textit{Rolle:} Forretningsudvikler.
+
+\end{description}
+
+\subsection*{Technical Skills}
+
+See seperate document.
+
+\subsection*{Language Skills}
+
+Jeg taler og skriver engelsk. Jeg kan forstå og gøre mig forståelig på
+svensk. Jeg ville gerne opfriske mit tyske, men lige nu behersker jeg
+kun at læse og til dels forstå talt tysk, hvis det ikke er for
+kompliceret.
+
+
+\section*{Personal Information}
+
+Jeg er 50 år, ikke-ryger.
+
+Jeg er gift med Linda, som jeg har boet sammen med i 20 år. Vi har
+ingen børn.
+
+Linda og jeg holder meget af at se en god film, både i biografen og
+derhjemme foran tv’et. Vi følger også med i (måske lidt for mange)
+tv-serier, blandt favoritterne er Game of Thrones, Homeland, The
+Walking Dead, American Horror Story og Criminal Minds.
+
+Jeg spiller jævnligt spil. Ikke så meget computerspil, selvom det
+hænder, men brætspil og rollespil. Det har jeg gjort lige siden
+slutningen 80’erne, endda med mange af de samme venner som i dag.
+
+Jeg er ret ferm i et køkken, og så kan jeg godt lide at lave mad. Så
+både til hverdag og fest er det oftest mig, der laver mad. Til maden
+drikker jeg helst en god øl, ofte udenlandsk eller fra et af de små
+danske bryggerier. Interessen for god øl har jeg haft i mere end 15
+år.
+
+\end{document}
