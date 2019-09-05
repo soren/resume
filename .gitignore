@@ -1,8 +1,9 @@
-public/*
+public/
 myinfo.tex
+public_html.in
 *.aux
 *.log
+*.out
 *.pdf
-/kompetencer.tex.ts
-/cv.tex.ts
-/public_html.in
+*.tex.ts
+\#*\#

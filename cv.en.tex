@@ -15,8 +15,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{parskip}
 \usepackage{marvosym}
+\usepackage{hyperref}
+\usepackage[super]{nth}
 
-\newcommand\redacted{[skjult i online version]}
+\newcommand\redacted{[hidden in online version]}
 
 \newcommand\myaddressone{\redacted}
 \newcommand\myaddresstwo{\redacted}
@@ -58,96 +60,133 @@
 \end{minipage}
 
 \bigskip
-\centerline{\small\textit{Latest version available here: http://slu.sdf.org/resume/cv.en.pdf}}
-\centerline{\small\textit{Date and time latest revision of this document: \input{cv.tex.ts}}}
+\centerline{\small\textit{Latest version available here: \url{http://slu.sdf.org/resume/cv.en.pdf}}}
+\centerline{\small\textit{Date and time latest revision of this document: \input{cv.en.tex.ts}}}
 
 \section*{Previous and current positions}
 
-\textbf{Freelance consulent} \hfill 2012 -- (now) \\
-\textsl{369 Consult}
+\textbf{AWS Solution Architect} \hfill 2018 -- (now) \\
+\textsl{KeyCore P/S}
+
+Working as a consultant for several customers I have been 
+
+\begin{itemize}
+  \item implementing several pipelines, including some with
+    cross-account and cross-region deployments, using \textit{AWS
+      CloudFormation}, \textit{AWS CodeBuild}, \textit{AWS
+      CodePipeline}, \textit{AWS CodeDeploy} and \textit{Amazon S3}
+  \item setting up an \textit{Amazon ECS/ECR} environment using a
+    cross-account pipeline to build \textit{Docker} images once and
+    deploy across development, test, pre-production and production
+    environments
+  \item developing a \textit{AWS Lambda} for controlling \textit{ECS
+    tasks} to enable seamless deployments
+  \item performing stress and load tests on temporary environments
+    created using \textit{AWS CloudFormation}
+  \item working with several other \textit{AWS} technologies and
+    services like \textit{Amazon EC2}, \textit{Amazon Simple Queue
+      Service (SQS)}, \textit{Amazon Simple Notification Service
+      (SNS)}, \textit{Amazon CloudWatch}, \textit{Amazon Relational
+      Database Service (RDS)}, \textit{AWS Identity and Access
+      Management (IAM)}, \textit{Amazon CloudFront}, \textit{Amazon
+      Route 53}, \textit{Amazon DynamoDB}, \textit{Virtual Private
+      Cloud (VPC)}, and \textit{AWS Database Migration Service}
+\end{itemize}
 
 \smallskip
 
-\textbf{Senior Konsulent, External} \hfill 2014 -- (now) \\
-\textsl{Nordea A/S}
+\textbf{Subcontractor, Back-end Developer} \hfill 2014 -- (2018) \\
+\textsl{Nordea Markets}
 
-Jeg har været med til udvikling, fejlretning og 3rd level support på
-en moderne webløsning til blandt andet valutahandel. Løsningen er
-baseret på RESTful micro services, Dropwizard, Oracle DB, Lucene,
-Hibernate og AngularJS. Desuden har jeg stået for implementeringen af
-automatiseret byg, test og udrulning i Jenkins og Bamboo.
+I’ve been part of a team developing, maintaining and performing
+\nth{3} level support for a modern web application dealing with FX
+trading. The system is based on \textit{RESTful Micro Services}
+implemented in \textit{Java} using \textit{Dropwizard}, \textit{Oracle
+  Database}, \textit{Lucene}, \textit{Hibernate}. I also implemented
+automated build, test and deployment using \textit{Jenkins CI} and
+\textit{Atlassian Bamboo}.
 
-Webløsningen afløser et tidligere produkt baseret på Java Swing, Java
-Web Start, Oracle DB og med flere integrationer til bagvedliggende
-systemer. Jeg har også hjulpet med videreudvikling, fejlretning og 3rd
-level support af dette produkt.
+The web application is a replacement for a product based on Java
+Swing, Java Web Start and Oracle DB; I’ve also helped with further
+development, maintenance and \nth{3} level support for this product.
 
 \smallskip
 
-\textbf{Senior Consulent, External} \hfill 2012 -- 2013 \\
+\textbf{Contractor, Senior Consultant} \hfill 2012 -- 2013 \\
 \textsl{Visma Consulting A/S}
 
-Fortsat som konsulent hos Visma Consulting, nu som selvstændig, se
-nedenfor.
+I continued working as an external consulting for Visma
+Consulting. See below for details.
+
+\smallskip
+
+\textbf{Freelance Consultant, Owner} \hfill 2012 -- 2018 \\
+\textsl{369 Consult}
+
+I started on my own as a freelance consultant.
+
+After getting a permanent position at KeyCore, my freelance work is in
+hiatus.
 
 \smallskip
 
 \textbf{Senior Consulent} \hfill 2011 -- 2012 \\
 \textsl{Solfisk Konsulenter Aps}
 
-Arbejdet som ekstern konsulent hos Visma Consulting, hvor jeg har
-været med til at udvikle to webløsninger baseret på bl.a. JSF 2, Seam,
-JBoss AS, Hibernate, XSL-FO (PDF), Web Services og Oracle
-DB. Udviklingen har været styret vha.\ Scrum og jeg har arbejdet med
-alle dele af udviklingen, fra back-end til front-end.  Har desuden
-arbejdet med AM og videreudvikling på både disse systemer og andre
-systemer, der vedligeholdes af Visma Consulting.
+Worked as an external consultant for Visma Consulting, where I helped
+as a full-stack developer to implement two new web applications based
+on JFS2, Seam, JBoss AS, Hibernate, XSL-FO (PDF), Web Services and
+Oracle DB. The development process was based on Scrum. I also worked
+on AM and further development of these two and other systems
+maintained by Visma Consulting.
 
 \smallskip
 
-\textbf{Senior Systemudvikler} \hfill 2010 -- 2011 \\
+\textbf{Senior Systems Developer} \hfill 2010 -- 2011 \\
 \textsl{LeasingBørsen Aps (now GoLease.com)}
 
-Jeg var en del af udviklingsafdelingen, men jeg havde også et ben
-driftsafdelingen. Deltog i videreudvikling og vedligehold af
-forskellige egenudviklede systemer, først og fremmest en
-web-applikation, der var skrevet i Perl, Catalyst og CouchDB.  Al
-udvikling var styret vha.\ Scrum. Jeg var derudover, som Release
-Manager, ansvarlig for integrationstest og udrulning i både test og
-produktion.
+Member of the development team, but also doing a lot of operations
+work. Working on development and maintenance of several proprietary
+systems, mainly a web application written in Perl using Catalyst and
+CouchDB. We successfully implemented Scrum, and I was involved in more
+than 25 successive two-week sprints. Beyond development, I was
+responsible for release management, automated testing and deployment.
 
 \smallskip
 
-\textbf{Senior Consulent} \hfill 2006 -- 2010 \\
+\textbf{Senior Consultant} \hfill 2006 -- 2010 \\
 \textsl{Sirius IT A/S (orig. TietoEnator A/S)}
 
-Medlem af et team med fokus på én kunde og dennes webbaserede
-systemer. Der har været tale om både projekter med nyudvikling samt
-support og fejlretning på de eksisterende systemer. Min rolle har
-primært været teknisk funderet og indadvendt mod teamet, først og
-fremmest som Build Master og dermed med det tekniske ansvar for
-leverancerne, og dernæst som udvikler og supporter.
+Member of a team focusing on one customer and their web-based
+systems. This included development of new systems as well as support
+and maintenance of existing systems. My roles were technically founded
+and supported the team, primarily as a build and release master
+responsible for deliveries. I also worked as a developer and
+supporter. Technologies included Apache Maven, Selenium, Java EE,
+PL/SQL and Oracle DB.
 
 \smallskip
 
 \textbf{Senior System Developer} \hfill 2000 -- 2006 \\
 \textsl{CSC Consulting Group (orig. eHuset)}
 
-Involveret i kundeprojekter af varierende størrelse. Dette har primært
-været webløsninger, oftes med en bagvedliggende database og/eller
-integration til eksisterende systemer. Min rolle har varieret en del,
-da jeg både har arbejdet med implementering, design, behovsafdækning
-(hos/med kunder), støtte for salg, support og løsningsarkitekt.
+Mainly working for customers on projects of varying sizes. Almost all
+projects were based on web technologies with database back-ends and/or
+integration with existing systems.  My role varied a great deal, as I
+worked with development, implementation, system design, requirements
+analysis, pre-sales support, maintenance/support and solution
+architect. Some of the main technologies were Java, Active Server
+Pages, SQL, HTML/CSS and JavaScript.
 
 \smallskip
 
 \textbf{Software Developer} \hfill 1996 -- 2000 \\
 \textsl{Dansk Maritimt Institut (now Force Technology)}
 
-Udvikling og vedligehold af in-house simulatorsystem og
-produktificering af samme. Mine opgaver var primært udvikling, på
-flere platforme og med flere teknologier – alt fra små scripts, over
-biblioteker/moduler til komplette brugergrænseflader.
+Development and maintenance of in-house full-mission maritime
+simulator. I worked with cross-platform development of scripts,
+libraries, sub-systems, graphics user interfaces in Perl, C, C++ and
+Visual Basic.
 
 
 \section*{Education}
@@ -155,25 +194,31 @@ biblioteker/moduler til komplette brugergrænseflader.
 \textbf{Master of Science in Engineering} \hfill 1987 -- 1995 \\
 \textsl{Technical University of Denmark}
 
-Mit afgangsspeciale hed \textit{Rent parallaktisk stereo}, og blev
-skrevet på Instituttet for matematisk modellering (IMM).
+My master thesis \textit{Rent parallaktisk stereo} (pure parallax
+stereo) was written at the Institute of Mathematical Modelling (IMM).
 
 
-\section*{Training \& courses}
+\section*{Further education \& certifications}
 
-\textbf{Nyheder i Java EE 6} \hfill (1 dag) 2010 \\
+\textbf{AWS Certified Solutions Architect -- Associate} \hfill 2019 \\
+\textsl{Amazon Web Services}
+
+\textbf{Architecting on AWS} \hfill (3 days) 2018 \\
+\textsl{Nordcloud Training}
+
+\textbf{Nyheder i Java EE 6} \hfill (1 day) 2010 \\
 \textsl{Lund\&Bendsen}
 
-\textbf{Introduktion til ITIL} \hfill (1 dag) 2008 \\
+\textbf{Introduktion til ITIL} \hfill (1 day) 2008 \\
 \textsl{(Internt kursus h/Sirius IT -- ekstern underviser)}
 
-\textbf{Introduktion PRINCE2} \hfill (1 dag) 2008 \\
+\textbf{Introduktion PRINCE2} \hfill (1 day) 2008 \\
 \textsl{(Internt kursus h/Sirius IT -- ekstern underviser)}
 
-\textbf{BEA kursus WLP-D11-70-01-CW-2} \hfill (5 dage) 2003 \\
+\textbf{BEA kursus WLP-D11-70-01-CW-2} \hfill (5 days) 2003 \\
 \textsl{Development with BEA WebLogic Portal}
 
-\textbf{BEA selvstudie WLS-D11-61-01-CW} \hfill (2 dage) 2003 \\
+\textbf{BEA selvstudie WLS-D11-61-01-CW} \hfill (2 days) 2003 \\
 \textsl{Fundamentals of J2EE Web Application Development\\WebLogic Server 6.1}
 
 %%\textbf{Skriv bedre} \hfill (1 dag) 2000 \\
@@ -182,10 +227,10 @@ skrevet på Instituttet for matematisk modellering (IMM).
 %%\textbf{Præsentationsteknik} \hfill (1 dag) 2002 \\
 %%\textsl{IDA}
 
-\textbf{Databaser og Internet (ASP, SQL)} \hfill (5 dage) 1999 \\
+\textbf{Databaser og Internet (ASP, SQL)} \hfill (5 days) 1999 \\
 \textsl{Dieu}
 
-\textbf{OOD med UML notation} \hfill (3 dage) 1998 \\
+\textbf{OOD med UML notation} \hfill (3 days) 1998 \\
 \textsl{Objektorienteret Design og C++ / Java Implementering\\Teknologisk Institut}
 
 
