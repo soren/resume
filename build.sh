@@ -1,15 +1,18 @@
 #!/bin/bash
 
-sources="cv.tex kompetencer.tex cv.en.tex"
+source="cv.tex kompetencer.tex cv.en.tex"
+output="output"
+public="public"
 
-mkdir -p output/ public/
+mkdir -p $output $public
 
-for file in $sources; do
-    date --date "$(git 2>/dev/null log $file|head -n3|awk '/^Date:/{print $2,$3,$4,$5,$6}')" +"%F %H:%M" > output/${file}.ts
-    pdflatex -output-dir output/ $file
-    (cd public && ln -fs ../output/${file%tex}pdf .)
+for file in $source; do
+    date --date "$(git 2>/dev/null log $file|head -n3|awk '/^Date:/{print $2,$3,$4,$5,$6}')" +"%F %H:%M" > $output/${file}.ts
+    pdflatex -output-dir $output $file && cp $output/${file%tex}pdf $public
 done
 
-if [[ -f public_html.in ]]; then
-    (cd public && cp ${sources//.tex/.pdf} $(<../public_html.in))
+public_html_conf=public_html.in
+
+if [[ -f $public_html_conf ]]; then
+    (cd $public && cp ${source//.tex/.pdf} $(<../$public_html_conf))
 fi
