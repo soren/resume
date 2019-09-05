@@ -11,6 +11,9 @@ jobs:
     - uses: actions/checkout@master
       with:
         fetch-depth: 1
+    - name: prepare
+      uses: docker://alpine/git
+        args: ./build.sh prepare
     - name: build
       uses: docker://fbenz/pdflatex
       if: github.event.deleted == false
