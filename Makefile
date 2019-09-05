@@ -1,7 +1,7 @@
-TEX_SOURCES = cv.tex kompetencer.tex
+TEX_SOURCES = cv.tex kompetencer.tex cv.en.tex
 PDF_TARGETS = $(TEX_SOURCES:.tex=.pdf)
 CONFIG_FILE = public_html.in
-PUBLISH_DIR = $(shell if [[ -f $(CONFIG_FILE) ]]; then cat $(CONFIG_FILE); else echo $(HOME)/public_html; fi)
+PUBLISH_DIR = $(shell if [[ -f $(CONFIG_FILE) ]]; then cat $(CONFIG_FILE); else echo public; fi)
 
 all: $(PDF_TARGETS)
 
