@@ -13,6 +13,7 @@ jobs:
         fetch-depth: 1
     - name: prepare
       uses: docker://alpine/git
+      with:
         args: ./build.sh prepare
     - name: build
       uses: docker://fbenz/pdflatex
