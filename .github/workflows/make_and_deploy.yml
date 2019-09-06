@@ -29,7 +29,9 @@ jobs:
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./public
     - name: Prepare Unredacted Build
-      run: echo -e "\\renewcommand\\myaddressone{$ADDRESS1}\n\\newcommand\\myaddresstwo{$ADDRESS2}\\newcommand\\myphone{$PHONE_NO}" >myinfo.tex
+      run: |
+        echo -e "\\renewcommand\\myaddressone{$ADDRESS1}\n\\newcommand\\myaddresstwo{$ADDRESS2}\\newcommand\\myphone{$PHONE_NO}" >myinfo.tex
+        cat myinfo.tex
       env:
         ADDRESS1: ${{ secrets.MY_ADDRESS1 }}
         ADDRESS2: ${{ secrets.MY_ADDRESS2 }}
