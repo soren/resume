@@ -59,8 +59,8 @@ case $action in
 
         for file in $source; do
             echo "[MSG] Getting modified time of $file"
-            if [[ ! -f $output/${file}.ts ]]; then
-                $dry_run && git log -1 --format=%ai $file | cut -c-16  > $output/${file}.ts
+            if [[ ! -f ${file}.ts ]]; then
+                $dry_run && git log -1 --format=%ai $file | cut -c-16  > ${file}.ts
             fi
             if [[ $action == "all" ]]; then
                 run pdflatex -output-dir $output $file && run cp $output/${file%tex}pdf $public
@@ -74,6 +74,7 @@ case $action in
                 (run cd $public && run cp ${source//.tex/.pdf} $(<../$public_html_conf))
             fi
         fi
+        run ls -l $output $public
         ;;
     clean)
         run rm -fR $output $public
