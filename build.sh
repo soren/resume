@@ -7,8 +7,8 @@ else
 fi
 
 source="cv.tex kompetencer.tex cv.en.tex"
-output="output"
-public="public"
+output="${OUTPUT_DIR:-output}"
+public="${PUBLIC_DIR:-public}"
 
 if [[ $action != "clean" ]]; then
     mkdir -p $output $public

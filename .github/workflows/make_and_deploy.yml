@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@master
       with:
         fetch-depth: 1
-    - name: Prepare
+    - name: Prepare Build
       uses: srt32/git-actions@v0.0.3
       with:
         args: ./build.sh prepare
@@ -28,10 +28,23 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./public
+    - name: Prepare Unredacted Build
+      run: echo -e "\\renewcommand\\myaddressone{$ADDRESS1}\n\\newcommand\\myaddresstwo{$ADDRESS2}\\newcommand\\myphone{$PHONE_NO}" >myinfo.tex
+      env:
+        ADDRESS1: ${{ secrects.MY_ADDRESS1 }}
+        ADDRESS2: ${{ secrects.MY_ADDRESS2 }}
+        PHONE_NO: ${{ secrects.MY_PHONE_NO }}
+    - name: Build Unredacted
+      uses: docker://fbenz/pdflatex
+      if: github.event.deleted == false
+      with:
+        args: ./build.sh
+      env:
+        PUBLIC_DIR: unredacted
     - name: Store
       uses: actions/aws/cli@master
       with:
-        args: s3 sync ./public s3://resume-unredacted.369.dk
+        args: s3 sync unredacted/*.pdf s3://resume-unredacted.369.dk
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
