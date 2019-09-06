@@ -1,4 +1,4 @@
-name: Make PDFs and publish to pages
+name: Create PDFs and publish to GitHub pages
 on:
   push:
     branches:
@@ -8,22 +8,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout
+      uses: actions/checkout@master
       with:
         fetch-depth: 1
-    - name: prepare
+    - name: Prepare
       uses: srt32/git-actions@v0.0.3
       with:
         args: ./build.sh prepare
-    - name: build
+    - name: Build
       uses: docker://fbenz/pdflatex
       if: github.event.deleted == false
       with:
         args: ./build.sh
-    - name: deploy
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v1.1.0
       if: success()
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./public
+    - name: Store
+      uses: actions/aws/cli@master
+      with:
+        args: s3 sync ./public s3://resume-unredacted.369.dk
+        secrets: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY]
