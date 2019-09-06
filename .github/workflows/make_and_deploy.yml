@@ -12,7 +12,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: prepare
-      uses: docker://alpine/git
+      uses: srt32/git-actions@v0.0.3
       with:
         args: ./build.sh prepare
     - name: build
