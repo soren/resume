@@ -74,7 +74,7 @@ case $action in
                 (run cd $public && run cp ${source//.tex/.pdf} $(<../$public_html_conf))
             fi
         fi
-        run ls -l $output $public
+        run ls -lR
         ;;
     clean)
         run rm -fR $output $public
