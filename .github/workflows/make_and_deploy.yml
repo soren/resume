@@ -31,9 +31,9 @@ jobs:
     - name: Prepare Unredacted Build
       run: echo -e "\\renewcommand\\myaddressone{$ADDRESS1}\n\\newcommand\\myaddresstwo{$ADDRESS2}\\newcommand\\myphone{$PHONE_NO}" >myinfo.tex
       env:
-        ADDRESS1: ${{ secrects.MY_ADDRESS1 }}
-        ADDRESS2: ${{ secrects.MY_ADDRESS2 }}
-        PHONE_NO: ${{ secrects.MY_PHONE_NO }}
+        ADDRESS1: ${{ secrets.MY_ADDRESS1 }}
+        ADDRESS2: ${{ secrets.MY_ADDRESS2 }}
+        PHONE_NO: ${{ secrets.MY_PHONE_NO }}
     - name: Build Unredacted
       uses: docker://fbenz/pdflatex
       if: github.event.deleted == false
