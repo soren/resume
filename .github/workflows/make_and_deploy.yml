@@ -40,11 +40,11 @@ jobs:
       uses: docker://fbenz/pdflatex
       if: github.event.deleted == false
       with:
-        args: ./build.sh 
+        args: ./build.sh -p unredacted
     - name: Store
       uses: actions/aws/cli@master
       with:
-        args: s3 sync public/*.pdf s3://resume-unredacted.369.dk
+        args: s3 sync unredacted/*.pdf s3://resume-unredacted.369.dk
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

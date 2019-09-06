@@ -1,34 +1,81 @@
 #!/bin/bash
 
-if [[ $# -eq 0 ]]; then
-    action=all
+function usage {
+    echo -e "Usage: $0 <action> [-d <public dir>] [-n]\n\nWhere <action> is one of\n"
+    for valid_action in ${valid_actions//[><]/ }; do echo "    $valid_action"; done
+    echo -e "\nand\n"
+    echo "    -d <public dir> sets the directory where the resulting PDFs are stored";
+    echo "    -n              performs a dry run"
+
+    echo
+}
+
+function run {
+    echo "[CMD] $*"
+    $dry_run || $*
+}
+
+valid_actions="<all><prepare><clean>"
+
+if [[ $# -gt 0 && ${1:0:1} != "-" ]]; then
+    action="$1"
+    shift
 else
-    [[ "$1" == "prepare" || "$1" == "clean" ]] && action=$1
+    action="all"
 fi
+
+if [[ "${valid_actions/<$action>}" == "$valid_actions" ]]; then
+    echo -e "Unknown action: $action\n"
+    usage
+    exit 1
+fi
+
+while [[ $# -gt 0 ]]; do
+    if [[ "$1" == "-p" ]]; then
+        if [[ -z "$2" ]]; then usage && exit 1; fi
+        public=$2
+        shift 2
+    elif [[ "$1" == "-n" ]]; then
+        dry_run=true
+        shift
+    else
+        echo -e "Unknow option: $1\n"
+        usage
+        exit 1
+    fi
+done
 
 source="cv.tex kompetencer.tex cv.en.tex"
 output="output"
-public="public"
+public="${public:-public}"
+dry_run="${dry_run:-false}"
 
-if [[ $action != "clean" ]]; then
-    mkdir -p $output $public
+echo "[VAR] public='$public'"
+echo "[VAR] dry_run='$dry_run'"
 
-    for file in $source; do
-        if [[ ! -f $output/${file}.ts ]]; then
-            git log -1 --format="%ai" $file | cut -c-16 > $output/${file}.ts
-        fi
+case $action in
+    all|prepare)
+        run mkdir -p $output $public
+
+        for file in $source; do
+            echo "[MSG] Getting modified time of $file"
+            if [[ ! -f $output/${file}.ts ]]; then
+                $dry_run && git log -1 --format=%ai $file | cut -c-16  > $output/${file}.ts
+            fi
+            if [[ $action == "all" ]]; then
+                run pdflatex -output-dir $output $file && run cp $output/${file%tex}pdf $public
+            fi
+        done
+
         if [[ $action == "all" ]]; then
-            pdflatex -output-dir $output $file && cp $output/${file%tex}pdf $public
-        fi
-    done
+            public_html_conf=public_html.in
 
-    if [[ $action == "all" ]]; then
-        public_html_conf=public_html.in
-
-        if [[ -f $public_html_conf ]]; then
-            (cd $public && cp ${source//.tex/.pdf} $(<../$public_html_conf))
+            if [[ -f $public_html_conf ]]; then
+                (run cd $public && run cp ${source//.tex/.pdf} $(<../$public_html_conf))
+            fi
         fi
-    fi
-else
-    rm -fR $output $public
-fi
+        ;;
+    clean)
+        run rm -fR $output $public
+    ;;
+esac
